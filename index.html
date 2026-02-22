@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FedExd Logistics</title>
+<style>
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#f4f6f8;
+margin:0;
+}
+
+header{
+background:#4d148c;
+color:white;
+padding:18px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+.container{
+margin-top:120px;
+text-align:center;
+}
+
+input{
+width:320px;
+padding:14px;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+padding:14px 25px;
+background:#ff6600;
+border:none;
+color:white;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+margin-left:10px;
+}
+
+button:hover{
+background:#e65c00;
+}
+
+footer{
+position:fixed;
+bottom:0;
+width:100%;
+background:#222;
+color:white;
+text-align:center;
+padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>FedExd Logistics</header>
+
+<div class="container">
+<h2>Track Your Shipment</h2>
+<p>Enter your tracking number below</p>
+
+<input type="text" id="tracking" placeholder="FDX123456789">
+<button onclick="track()">Track</button>
+</div>
+
+<footer>© 2026 FedExd Logistics. Independent courier service.</footer>
+
+<script>
+function track(){
+let num=document.getElementById("tracking").value;
+if(num==""){
+alert("Please enter tracking number");
+return;
+}
+window.location.href="track.html?code="+num;
+}
+</script>
+
+</body>
+</html>
