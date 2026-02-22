@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shipment Tracking</title>
+<style>
+body{font-family:Arial;background:#eef2f5;margin:0;}
+header{background:#4d148c;color:white;padding:15px;text-align:center;font-size:24px;}
+.box{background:white;width:90%;max-width:700px;margin:40px auto;padding:25px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.1);}
+.status{padding:12px;margin:10px 0;border-left:5px solid #4d148c;background:#f4f6f8;}
+.active{border-left:5px solid #ff6600;background:#fff3e6;}
+</style>
+</head>
+
+<body>
+
+<header>FedExd Shipment Details</header>
+
+<div class="box">
+<h2 id="code"></h2>
+
+<div class="status active">Shipment information received</div>
+<div class="status active">Package picked up</div>
+<div class="status active">In transit</div>
+<div class="status">Arrived destination country</div>
+<div class="status">Out for delivery</div>
+<div class="status">Delivered</div>
+
+</div>
+
+<script>
+const params=new URLSearchParams(window.location.search);
+document.getElementById("code").innerText="Tracking Number: "+params.get("code");
+</script>
+
+</body>
+</html>
